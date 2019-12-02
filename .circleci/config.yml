@@ -1,0 +1,10 @@
+version: 2.0
+jobs:
+  build:
+    machine:
+    steps:
+      - checkout
+      - run: docker login
+      - run: docker build . -t michalhodur/ninjacat_latex:latest
+      - run: docker push michalhodur/ninjacat_latex:latest
+
