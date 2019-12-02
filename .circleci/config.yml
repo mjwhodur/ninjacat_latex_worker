@@ -4,7 +4,7 @@ jobs:
     machine: true
     steps:
       - checkout
-      - run: docker login -u $DOCKER_LOGIN -p $DOCKER_PASSWD
+      - run: docker login -u $DOCKER_USER -p $DOCKER_PASSWD
       - run: docker build . -t michalhodur/ninjacat_latex:latest
       - run: docker push michalhodur/ninjacat_latex:latest
 
